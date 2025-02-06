@@ -72,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen> {
       await Future.delayed(Duration(seconds: 3));
       context.read<AuthenticationBloc>().add(isLoggedInEvent());
     } catch (e) {
-      debugPrint("Error in navigation: $e");
+      debugPrint("Error in  the navigation: $e");
     }
   }
 
