@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496304666169",
+    "project_id": "ecommarcerestapi",
+    "storage_bucket": "ecommarcerestapi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496304666169:android:90a2897623503549343fe8",
+        "android_client_info": {
+          "package_name": "com.example.e_commarce_rest_api"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzvRQwCN2HMrIbiHhy7cCUVPVrcCyfLhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

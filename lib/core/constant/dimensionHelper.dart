@@ -1,0 +1,54 @@
+class DimensionHelper{
+  DimensionHelper._();
+
+  static const double dimens_10 = 10.0;
+  static const double dimens_12 = 12.0;
+  static const double dimens_6 = 6.0;
+  static const double dimens_8 = 8.0;
+  static const double dimens_4 = 4.0;
+  static const double dimens_500 = 500.0;
+  static const double dimens_2 = 2.0;
+  static const double dimens_11 = 11.0;
+  static const double dimens_190 = 190.0;
+  static const double dimens_180 = 180.0;
+  static const double dimens_13 = 13.0;
+  static const double dimens_110 = 110.0;
+  static const double dimens_120 = 120.0;
+  static const double dimens_210 = 210.0;
+  static const double dimens_220 = 220.0;
+  static const double dimens_170 = 170.0;
+  static const double dimens_150 = 150.0;
+  static const double dimens_60 = 60.0;
+  static const double dimens_70 = 70.0;
+  static const double dimens_160 = 160.0;
+  static const double dimens_165 = 165.0;
+  static const double dimens_15 = 15.0;
+  static const double dimens_17 = 17.0;
+  static const double dimens_19 = 19.0;
+  static const double dimens_14 = 14.0;
+  static const double dimens_16 = 16.0;
+  static const double dimens_18 = 18.0;
+  static const double dimens_20 = 20.0;
+  static const double dimens_200 = 200.0;
+  static const double dimens_130 = 130.0;
+  static const double dimens_22 = 22.0;
+  static const double dimens_24 = 24.0;
+  static const double dimens_80 = 80.0;
+  static const double dimens_90 = 90.0;
+  static const double dimens_100 = 100.0;
+  static const double dimens_250 = 250.0;
+  static const double dimens_230 = 230;
+  static const double dimens_26 = 26.0;
+  static const double dimens_28 = 28.0;
+  static const double dimens_30 = 30.0;
+  static const double dimens_32 = 32.0;
+  static const double dimens_34 = 34.0;
+  static const double dimens_36 = 36.0;
+  static const double dimens_38 = 38.0;
+  static const double dimens_40 = 40.0;
+  static const double dimens_50 = 50.0;
+  static const double dimens_45 = 45.0;
+  static const double dimens_300  = 300.0;
+  static const double dimens_all = double.infinity;
+
+ }
