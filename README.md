@@ -1,4 +1,37 @@
-# e_commarce_rest_api
+# SHOPPING APP
+<br>
+A feature-rich shopping app built using Flutter and Dart, designed with clean architecture principles for maintainability and scalability.
+<br>
+||        KEY  FEATURES  ||<br>
+USER AUTHENTICATION  :    Secure login and signup powered by Firebase Authentication.<br>
+DATABASE INTEGRATION  :   Seamless product and user data management using Firestore.<br>
+STATE PERSISTANCE    :    Shared Preferences for lightweight local data storage.<br>
+API INTEGRATION      :    REST API support for external services.<br>
+ERROR HANDLING       :    Functional programming practices using the Either package.<br>
+
+
+||        SHOPPING APP SCREENS  ||<br>
+HOME SCREEN  :    Browse featured products and categories.<br>
+WISHLIST SCREEN  :   Browse featured products and categories.<br>
+ALL PRODUCT SCREEN    :    View and explore the complete product catalog. <br>
+PROFILE SCREEN      :    Manage user information . <br>
+SETTING SCREEN       :    Customize app preferences and notifications.<br>
+
+||       💡 FUTURE INHANCEMENTS   ||<br>
+
+    🧾 Order management system<br>
+    🌍 Multi-language support<br>
+    💳 Payment gateway integration<br>
+
+ ||   🛠️ TECHNICAL SKILLS  ||<br>
+
+    Framework: Flutter<br>
+    Language: Dart<br>
+    Database: Firestore<br>
+    Authentication: Firebase Auth<br>
+    Local Storage: Shared Preferences<br>
+    Architecture: Clean Architecture<br>
+    State Management: Either Package<br>
 
 A new Flutter project.
 
