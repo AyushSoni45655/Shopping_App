@@ -13,3 +13,7 @@ class loginEvent extends AuthenticationEvent{
 }
 class logoutEvent extends AuthenticationEvent{}
 class isLoggedInEvent extends AuthenticationEvent{}
+class ForgotPasswordEvent extends AuthenticationEvent{
+  final String email;
+  ForgotPasswordEvent({required this.email});
+}

@@ -47,4 +47,14 @@ class UserRepoImplementation extends UserRepository{
     }
   }
 
+  @override
+  Future<Either<Failuress, void>>forgotPassword(String email)async{
+    try{
+      final fPassword = await userDataSource.forgotPassword(email);
+      return Right(fPassword);
+    }catch(e){
+      return Left(ServerFailure(e.toString()));
+    }
+  }
+
 }

@@ -9,6 +9,10 @@ class AuthSuccess extends AuthenticationState {
   final UserEntity user;
   AuthSuccess(this.user);
 }
+class fetchUserData extends AuthenticationState{
+  final UserEntity userEntity;
+  fetchUserData({required this.userEntity});
+}
 class AuthFailure extends AuthenticationState {
   final String message;
   AuthFailure(this.message);

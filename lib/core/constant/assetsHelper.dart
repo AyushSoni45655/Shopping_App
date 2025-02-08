@@ -43,5 +43,6 @@ static const String slid1 = "assets/slider/slide.jpg";
 static const String slid2 = "assets/slider/sl.jpg";
 static const String google = "assets/slider/search.png";
 static const String splash = "assets/slider/spls.jpg";
+static const String person = "assets/slider/person.jpg";
 
 }

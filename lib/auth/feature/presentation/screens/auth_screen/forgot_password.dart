@@ -1,9 +1,12 @@
+import 'package:e_commarce_rest_api/auth/feature/presentation/blocs/auth/authentication_bloc.dart';
 import 'package:e_commarce_rest_api/auth/feature/presentation/widgets/custom_button.dart';
 import 'package:e_commarce_rest_api/auth/feature/presentation/widgets/custom_text.dart';
 import 'package:e_commarce_rest_api/auth/feature/presentation/widgets/cutsom_textField.dart';
 import 'package:e_commarce_rest_api/core/constant/dimensionHelper.dart';
 import 'package:e_commarce_rest_api/core/constant/validation.dart';
+import 'package:e_commarce_rest_api/core/utils/utility.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
@@ -48,7 +51,18 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(DimensionHelper.dimens_15.sp),
-          child: Column(
+          child: BlocConsumer<AuthenticationBloc, AuthenticationState>(
+  listener: (context, state) {
+    if(state is AuthFailure){
+      Utils().toastMessage(state.message.toString());
+    }
+    else if(state is AuthLoggedOut){
+      Utils().toastMessage("Go to Mail And Set New Password And Login Again!!!");
+      context.go("/login");
+    }
+  },
+  builder: (context, state) {
+    return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -83,9 +97,13 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 prefixIcon: Icons.mail,
               ),
               SizedBox(height: DimensionHelper.dimens_40.h,),
-              CustomButton(title: StringHelper.submit, callback: (){}, text: StringHelper.submit)
+             state is AuthLoading? CircularProgressIndicator(color: Colors.green,): CustomButton(title: StringHelper.submit, callback: (){
+               context.read<AuthenticationBloc>().add(ForgotPasswordEvent(email: emailCon.text.trim()));
+             }, text: StringHelper.submit)
             ],
-          ),
+          );
+  },
+),
         ),
       ),
     );

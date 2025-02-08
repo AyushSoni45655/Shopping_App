@@ -9,6 +9,7 @@ Future<UserModal>signup(UserEntity users);
 Future<UserModal>login(String email,String password);
 Future<void>logout();
 Future<bool>isUserLoggedIn();
+Future<void>forgotPassword(String email);
 }
 class UserDataSourceImplement extends UserDataSource{
   final FirebaseAuth auth;
@@ -48,6 +49,11 @@ return UserModal.fromJson(userdata.data()!, credentail.user!.uid);
   @override
   Future<bool> isUserLoggedIn()async{
    return sharedPreferences.containsKey('uid');
+  }
+
+  @override
+  Future<void>forgotPassword(String email)async{
+     await auth.sendPasswordResetEmail(email: email);
   }
 
 }

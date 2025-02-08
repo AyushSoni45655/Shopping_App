@@ -6,6 +6,7 @@ import 'package:e_commarce_rest_api/auth/feature/data/repo_implementation/user_r
 import 'package:e_commarce_rest_api/auth/feature/domain/repositry/product_fetch.dart';
 import 'package:e_commarce_rest_api/auth/feature/domain/repositry/user_repositry.dart';
 import 'package:e_commarce_rest_api/auth/feature/domain/usecase/category_usecase.dart';
+import 'package:e_commarce_rest_api/auth/feature/domain/usecase/forgot_password.dart';
 import 'package:e_commarce_rest_api/auth/feature/domain/usecase/login_usecase.dart';
 import 'package:e_commarce_rest_api/auth/feature/domain/usecase/logout_usecase.dart';
 import 'package:e_commarce_rest_api/auth/feature/domain/usecase/product_use_case.dart';
@@ -48,8 +49,9 @@ Future<void>setupLocator()async{
   sl.registerLazySingleton<SignInUseCase>(() => SignInUseCase(userRepository: sl()),);
   sl.registerLazySingleton<LoginUseCase>(() => LoginUseCase(userRepository: sl()),);
   sl.registerLazySingleton<LogOutUseCase>(() => LogOutUseCase(userRepository: sl()),);
+  sl.registerLazySingleton<ForgotPasswordUseCase>(() => ForgotPasswordUseCase(userRepository: sl()),);
   sl.registerLazySingleton<UserLoggedInUseCase>(() => UserLoggedInUseCase(userRepository: sl()),);
   sl.registerFactory(() => NavigationBloc(),);
-  sl.registerFactory(() => AuthenticationBloc(logOutUseCase: sl(), loginUseCase: sl(), signInUseCase: sl(), loggedInUseCase: sl()),);
+  sl.registerFactory(() => AuthenticationBloc(logOutUseCase: sl(), loginUseCase: sl(), signInUseCase: sl(), loggedInUseCase: sl(),forgotPasswordUseCase: sl()),);
 
 }
